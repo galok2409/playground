@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: demo3
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: demo3
+  template:
+    metadata:
+      labels:
+        app: demo3
+    spec:
+      containers:
+        - name: restcomp3
+          image: us-central1-docker.pkg.dev/playground-380006/alokreg/restcomp:0.0.1
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: demo3
+spec:
+  selector:
+    app: demo3
+  ports:
+    - protocol: 'TCP'
+      port: 8080
+      targetPort: 8080
+  type: LoadBalancer
