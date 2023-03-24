@@ -27,7 +27,7 @@ jobs:
     env:
       # Replace $PROJECT_ID with your project ID
       PROJECT_ID: ${{ secrets.GKE_PROJECT }}
-      IMAGE_NAME: gcr.io/$PROJECT_ID/alokgit
+      IMAGE_NAME: gcr.io/playground-380006/alokreg/alokgit:0.0.1
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
