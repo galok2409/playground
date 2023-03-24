@@ -26,9 +26,9 @@ jobs:
 
     env:
       # Replace $PROJECT_ID with your project ID
-      #PROJECT_ID: ${{ secrets.GKE_PROJECT }}
+      PROJECT_ID: ${{ secrets.GKE_PROJECT }}
       #IMAGE_NAME: gcr.io/playground-380006/alokreg/alokgit:0.0.1
-      PROJECT_ID: playground-380006
+      #PROJECT_ID: playground-380006
       IMAGE_NAME: alokgit:0.0.2
       REGION_NAME: us-central1
       REGISTRY_NAME: alokreg
