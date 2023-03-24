@@ -56,7 +56,7 @@ jobs:
       - name: Push Docker image
         run: docker push $REGION_NAME-docker.pkg.dev/$PROJECT_ID/$REGISTRY_NAME/$IMAGE_NAME
 
-      #- id: deploy #
+      #- id: deploy
       #  name: Deploy Docker image
       #  uses: "google-github-actions/deploy-cloudrun@v0"
       #  with:
