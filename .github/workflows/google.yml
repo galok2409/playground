@@ -60,7 +60,6 @@ jobs:
 
       # Setup gcloud CLI google
       - uses: google-github-actions/setup-gcloud@v0.6.0
-        with:
 
      # - name: Configure GKE access 1
      #   run: gcloud components install gke-gcloud-auth-plugin
