@@ -32,6 +32,7 @@ jobs:
       IMAGE_NAME: alokgit:0.0.5
       REGION_NAME: us-central1
       REGISTRY_NAME: alokreg
+      CLUSTER_NAME: playground-cluster-1
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
@@ -56,6 +57,11 @@ jobs:
 
       - name: Push Docker image
         run: docker push $REGION_NAME-docker.pkg.dev/$PROJECT_ID/$REGISTRY_NAME/$IMAGE_NAME
+
+      - name: Configure GKE access 1
+        run: gcloud components install gke-gcloud-auth-plugin
+      - name: Configure GKE access 2
+        run: gcloud container clusters get-credentials $CLUSTER_NAME --region=$REGION_NAME
 
       #- id: deploy
       #  name: Deploy Docker image
