@@ -65,6 +65,9 @@ jobs:
         with:
           cluster_name: ${{ env.CLUSTER_NAME }}
           location: ${{ env.REGION_NAME }}
+      - name: Deploy
+        working-directory: playground/complete/deployment
+        run: kubectl apply -f deployment.yaml
 
      # - name: Configure GKE access 1
      #   run: gcloud components install gke-gcloud-auth-plugin
