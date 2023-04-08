@@ -58,7 +58,7 @@ jobs:
       - name: Push Docker image
         run: docker push $REGION_NAME-docker.pkg.dev/$PROJECT_ID/$REGISTRY_NAME/$IMAGE_NAME
 
-      # Setup gcloud CLI
+      # Setup gcloud CLI google
       - uses: google-github-actions/setup-gcloud@v0.6.0
         with:
         service_account_key: ${{ secrets.GCP_CREDENTIALS }}
