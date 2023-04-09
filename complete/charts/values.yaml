@@ -5,7 +5,7 @@
 replicaCount: 1
 
 image:
-  repository: us-central1-docker.pkg.dev/playground-380006/alokreg/restcomp
+  repository: us-central1-docker.pkg.dev/playground-380006/alokreg/alokgithelm
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
   tag: ""

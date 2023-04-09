@@ -29,7 +29,7 @@ jobs:
       PROJECT_ID: ${{ secrets.GKE_PROJECT }}
       #IMAGE_NAME: gcr.io/playground-380006/alokreg/alokgit:0.0.1
       #PROJECT_ID: playground-380006
-      IMAGE_NAME: alokgit:0.0.5
+      IMAGE_NAME: alokgithelm:0.0.5
       REGION_NAME: us-central1
       REGISTRY_NAME: alokreg
       CLUSTER_NAME: playground-cluster-1
@@ -67,6 +67,10 @@ jobs:
           location: ${{ env.REGION_NAME }}
       - name: Install Helm
         run: curl https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3 | bash
+
+      - name: deploy
+        working-directory: complete/charts
+        run: helm install demo charts
 
       #- name: Deploy
       #  working-directory: complete/deployment
