@@ -70,7 +70,7 @@ jobs:
 
       - name: deploy
         working-directory: complete/charts
-        run: helm install demo charts
+        run: helm install demo complete/charts
 
       #- name: Deploy
       #  working-directory: complete/deployment
