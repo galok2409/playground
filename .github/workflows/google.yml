@@ -69,8 +69,8 @@ jobs:
         run: curl https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3 | bash
 
       - name: deploy
-        #working-directory: complete/charts
-        run: helm install demo playground/complete/charts
+        #working-directory: complete
+        run: helm install demo charts
 
       #- name: Deploy
       #  working-directory: complete/deployment
