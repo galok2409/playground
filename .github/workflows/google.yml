@@ -65,9 +65,12 @@ jobs:
         with:
           cluster_name: ${{ env.CLUSTER_NAME }}
           location: ${{ env.REGION_NAME }}
-      - name: Deploy
-        working-directory: complete/deployment
-        run: kubectl apply -f deployment.yaml
+      - name: Install Helm
+        run: curl https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3 | bash
+
+      #- name: Deploy
+      #  working-directory: complete/deployment
+      #  run: kubectl apply -f deployment.yaml
 
      # - name: Configure GKE access 1
      #   run: gcloud components install gke-gcloud-auth-plugin
