@@ -32,7 +32,7 @@ jobs:
       IMAGE_NAME: alokgithelm:0.0.5
       REGION_NAME: us-central1
       REGISTRY_NAME: alokreg
-      CLUSTER_NAME: playground-cluster-1
+      CLUSTER_NAME: cluster-1
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
