@@ -14,6 +14,7 @@ public class GreetingController {
 
 	@GetMapping("/greeting")
 	public Greeting greeting(@RequestParam(value = "name", defaultValue = "World GKE!@main-1") String name) {
+
 		//Test message
 		return new Greeting(counter.incrementAndGet(), String.format(template, name));
 	}
