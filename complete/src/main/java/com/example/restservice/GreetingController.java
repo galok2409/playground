@@ -13,7 +13,7 @@ public class GreetingController {
 	private final AtomicLong counter = new AtomicLong();
 
 	@GetMapping("/greeting")
-	public Greeting greeting(@RequestParam(value = "name", defaultValue = "World GKE!@main-1") String name) {
+	public Greeting greeting(@RequestParam(value = "name", defaultValue = "World GKE!@main-2") String name) {
 		//Test message
 		return new Greeting(counter.incrementAndGet(), String.format(template, name));
 	}
